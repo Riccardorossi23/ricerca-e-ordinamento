@@ -31,6 +31,7 @@ namespace ricerca_e_ordinamento
         private void btnInserisci_Click(object sender, RoutedEventArgs e)
         {
             NomiDaInserire.Add($"{txtNomiDaInserire.Text}");
+            txtNomiDaInserire.Clear();
             NomiDaInserire.Sort();
             lblLista.Content = "";
             for (i = 0; i < NomiDaInserire.Count; i++)
@@ -54,7 +55,10 @@ namespace ricerca_e_ordinamento
         private void btn_cerca_Click(object sender, RoutedEventArgs e)
         {
             {
-                bool ricerca = false;
+               
+                
+                    bool ricerca = false;
+                MessageBox.Show("l'alunno non è in questa lista");
                 for (int i = 0; i < NomiDaInserire.Count; i++)
                 {
                     if (NomiDaInserire[i] == txtcerca.Text)
@@ -71,10 +75,21 @@ namespace ricerca_e_ordinamento
 
         private void btn_salva_Click(object sender, RoutedEventArgs e)
         {
-            StreamWriter w = new StreamWriter("fileRicercaeordinamento.txt", false, Encoding.UTF8);
+            StreamWriter w = new StreamWriter("fileRicercaeOrdinamento.txt", false, Encoding.UTF8);
             {
+                for (i = 0; i < NomiDaInserire.Count; i++)
+                {
+                    w.WriteLine ($" { i + 1} {NomiDaInserire[i]}\n");
+                }
 
+                w.Flush();
+                w.Close();
+                
             }
+        }
+
+        private void lblLista_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
 
         }
     }

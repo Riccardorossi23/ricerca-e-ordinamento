@@ -7,13 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="666.496">
     <Grid Margin="0,0,2,0">
+
         <Button x:Name="btnInserisci" Content="inserisci" HorizontalAlignment="Left" Height="29" Margin="233,17,0,0" VerticalAlignment="Top" Width="67" Click="btnInserisci_Click"/>
         <TextBox x:Name="txtNomiDaInserire" HorizontalAlignment="Left" Height="24" Margin="120,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextChanged="txtNomiDaInserire_TextChanged"/>
-        <Button x:Name="btn_salva" Content="Salva" HorizontalAlignment="Left" Height="36" Margin="173,273,0,0" VerticalAlignment="Top" Width="67" Click="btn_salva_Click"/>
+        <Button x:Name="btn_salva" Content="Salva" HorizontalAlignment="Left" Height="36" Margin="456,341,0,0" VerticalAlignment="Top" Width="67" Click="btn_salva_Click"/>
         <Label Content="nomi studente:" HorizontalAlignment="Left" Height="36" Margin="10,15,0,0" VerticalAlignment="Top" Width="95"/>
-        <Label x:Name="lblLista" Content="" HorizontalAlignment="Left" Height="128" Margin="120,64,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="txtcerca" HorizontalAlignment="Left" Height="23" Margin="120,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="btn_cerca" Content="cerca" HorizontalAlignment="Left" Height="36" Margin="233,210,0,0" VerticalAlignment="Top" Width="67" Click="btn_cerca_Click"/>
+        <Label x:Name="lblLista" Content="" HorizontalAlignment="Left" Height="238" Margin="456,74,0,0" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="txtcerca" HorizontalAlignment="Left" Height="23" Margin="333,17,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="btn_cerca" Content="cerca" HorizontalAlignment="Left" Height="36" Margin="456,17,0,0" VerticalAlignment="Top" Width="67" Click="btn_cerca_Click"/>
 
+        
     </Grid>
 </Window>
